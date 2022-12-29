@@ -54,12 +54,15 @@ public class UserWrapper {
 	}
 
 	public UserWrapper(Integer id, String ename, String enumber, String email, String status) {
-		super();
+		//super();
 		this.id = id;
 		this.ename = ename;
 		this.enumber = enumber;
 		this.email = email;
 		this.status = status;
+	}
+	public UserWrapper() {
+		
 	}
 
 }

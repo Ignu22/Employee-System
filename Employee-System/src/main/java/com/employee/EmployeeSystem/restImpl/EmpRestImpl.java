@@ -68,4 +68,57 @@ public class EmpRestImpl implements EmpRest{
 		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
+	@Override
+	public ResponseEntity<String> checkToken() {
+		try {
+			return empservice.checkToken();
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
+
+	}
+
+	@Override
+	public ResponseEntity<String> changePassword(Map<String, String> requestMap) {
+		try {
+			return empservice.changePassword(requestMap); 
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
+
+	}
+
+	@Override
+	public ResponseEntity<String> forgotPassword(Map<String, String> requestMap) {
+		try {
+			return empservice.forgotPassword(requestMap);
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	@Override
+	public ResponseEntity<String> updateEmployee(Map<String, String> requestMap) {
+		try {
+			return empservice.updateEmployee(requestMap);
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	@Override
+	public ResponseEntity<String> deleteEmployee(Integer id) {
+		try {
+			return empservice.deleteEmployee(id);
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return EmpUtils.getResponseEntity(EmpConstants.Something_Wrong, HttpStatus.INTERNAL_SERVER_ERROR);
+
+	}
+
 }

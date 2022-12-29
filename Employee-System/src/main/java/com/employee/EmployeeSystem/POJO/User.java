@@ -95,7 +95,7 @@ public class User implements Serializable{
 	}
 
 	public User(Integer id, String ename, String enumber, String email, String password, String status, String role) {
-		super();
+		//super();
 		this.id = id;
 		this.ename = ename;
 		this.enumber = enumber;

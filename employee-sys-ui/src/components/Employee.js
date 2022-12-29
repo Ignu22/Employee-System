@@ -7,6 +7,10 @@ const Employee = ({ employee, deleteEmployee }) => {
     e.preventDefault();
     navigate(`/editEmployee/${id}`);
   };
+  const viewEmployee =(e,id) => {
+    e.preventDefault();
+    navigate('/viewEmployee/${id}');
+  };
 
   return (
     <tr key={employee.id}>
@@ -22,13 +26,18 @@ const Employee = ({ employee, deleteEmployee }) => {
       <td className="text-right px-6 py-4 whitespace-nowrap font-medium text-sm">
         <a
           onClick={(e, id) => editEmployee(e, employee.id)}
-          className="text-indigo-600 hover:text-indigo-800 px-4 hover:cursor-pointer">
+          className="text-indigo-600 hover:text-indigo-800 px-3 hover:cursor-pointer">
           Edit
         </a>
         <a
           onClick={(e, id) => deleteEmployee(e, employee.id)}
-          className="text-indigo-600 hover:text-indigo-800 hover:cursor-pointer">
+          className="text-indigo-600 hover:text-indigo-800 px-4 hover:cursor-pointer">
           Delete
+        </a>
+        <a
+          onClick={(e, id) => viewEmployee(e, employee.id)}
+          className="text-indigo-600 hover:text-indigo-800 hover:cursor-pointer">
+          View
         </a>
       </td>
     </tr>

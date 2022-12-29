@@ -16,5 +16,15 @@ public interface EmpService {
 	ResponseEntity<List<UserWrapper>> getAllUser();
 	
 	ResponseEntity<String> update(Map<String, String> requestMap);
+	
+	ResponseEntity<String> checkToken();
+	
+	ResponseEntity<String> changePassword(Map<String, String> requestMap);
+	
+	ResponseEntity<String> forgotPassword(Map<String, String> requestMap);
+
+	ResponseEntity<String> updateEmployee(Map<String, String> requestMap);
+	
+	ResponseEntity<String> deleteEmployee(Integer id);
 
 }

@@ -4,6 +4,7 @@ import AddEmployee from "./components/AddEmployee";
 import EmployeeList from "./components/EmployeeList";
 import Navbar from "./components/Navbar";
 import UpdateEmployee from "./components/UpdateEmployee";
+import ViewEmployee from "./components/ViewEmployee";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/employeeList" element={<EmployeeList />} />
           <Route path="/addEmployee" element={<AddEmployee />} />
           <Route path="/editEmployee/:id" element={<UpdateEmployee />} />
+          <Route path="/viewEmployee/:id" element={<ViewEmployee />} />
         </Routes>
       </BrowserRouter>
     </>
